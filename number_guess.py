@@ -19,7 +19,7 @@ while i>0:
     if(guess.isdigit()==True and x==int(guess)):
         print("congratulations! you guess the number correctly.")
         quit()
-    else:
+    elif(i>1):
         print("you have "+str(i-1)+" chances")
     i-=1
 
