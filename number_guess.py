@@ -13,9 +13,14 @@ while top_of_range<=0:
     top_of_range=getInput()
 
 x=random.randint(0,top_of_range)
-guess=input("Please guess the number between 1 and "+str(top_of_range)+": ")
-if(guess.isdigit()==True and x==int(guess)):
-    print("congratulations! you guess the number correctly.")
-else:
-    print("Sorry the number was "+str(x))
-    quit()
+i=3
+while i>0:
+    guess=input("Please guess the number between 1 and "+str(top_of_range)+": ")
+    if(guess.isdigit()==True and x==int(guess)):
+        print("congratulations! you guess the number correctly.")
+        quit()
+    else:
+        print("you have "+str(i-1)+" chances")
+    i-=1
+
+print("Sorry the number was "+str(x))
